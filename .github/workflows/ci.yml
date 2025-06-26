@@ -92,20 +92,18 @@ jobs:
             ${{ steps.changelog.outputs.changelog }}
 
             ## Docker
-            [![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/reference)](https://hub.docker.com/r/wcjiang/reference) [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/reference)](https://hub.docker.com/r/wcjiang/reference) [![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/reference)](https://hub.docker.com/r/wcjiang/reference)
+            [![Docker Image Version (latest by date)](https://img.shields.io/docker/v/maheshndev/reference)](https://hub.docker.com/r/maheshndev/reference) [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/maheshndev/reference)](https://hub.docker.com/r/maheshndev/reference) [![Docker Pulls](https://img.shields.io/docker/pulls/maheshndev/reference)](https://hub.docker.com/r/maheshndev/reference)
 
           
             ```bash
-            docker pull wcjiang/reference
+            docker pull maheshndev/reference
             ```
 
             ```bash
-            docker run --name reference --rm -d -p 9667:3000 wcjiang/reference:latest
+            docker run --name reference --rm -d -p 9667:3000 maheshndev/reference:latest
             # Or
-            docker run --name reference -itd -p 9667:3000 wcjiang/reference:latest
+            docker run --name reference -itd -p 9667:3000 maheshndev/reference:latest
             ```
-
-            在浏览器中访问以下 URL
 
             ```bash
             http://localhost:9667/
@@ -127,7 +125,7 @@ jobs:
           push: true
           context: .
           platforms: linux/amd64,linux/arm64
-          tags: wcjiang/reference:latest
+          tags: maheshndev/reference:latest
 
       - name: Build and push image:tags
         uses: docker/build-push-action@v5
@@ -136,7 +134,7 @@ jobs:
           push: true
           context: .
           platforms: linux/amd64,linux/arm64
-          tags: wcjiang/reference:${{steps.changelog.outputs.version}}
+          tags: maheshndev/reference:${{steps.changelog.outputs.version}}
 
       # # Create Docker Image in Github
       # - name: Login to the GitHub Container Registry
