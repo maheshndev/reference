@@ -55,22 +55,6 @@ jobs:
           Website: https://maheshndev.github.io/reference
           ## Docker
 
-          [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-048754?logo=buymeacoffee)](https://maheshndev.github.io/#/sponsor) [![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/reference)](https://hub.docker.com/r/wcjiang/reference) [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/reference)](https://hub.docker.com/r/wcjiang/reference) [![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/reference)](https://hub.docker.com/r/wcjiang/reference)
-
-          轻松通过 `docker` 部署 `Quick Reference` 网站。
-
-          ```bash
-          docker pull wcjiang/reference
-          ```
-
-          ```bash
-          docker run --name reference --rm -d -p 9667:3000 wcjiang/reference:latest
-          # Or
-          docker run --name reference -itd -p 9667:3000 wcjiang/reference:latest
-          ```
-
-          在浏览器中访问以下 URL
-
           ```bash
           http://localhost:9667/
           ```
@@ -87,7 +71,7 @@ jobs:
         id: changelog
         uses: maheshndev/changelog-generator@main
         with:
-          filter-author: (小弟调调™|\@github-actions-bot\@renovate-bot|dependabot|renovate\\[bot\\]|dependabot\\[bot\\]|Renovate Bot)
+          filter-author: (\@github-actions-bot\@renovate-bot|dependabot|renovate\\[bot\\]|dependabot\\[bot\\]|Renovate Bot)
           filter: (^[\s]+?[R|r]elease)|(^[R|r]elease)
 
       - name: Create Release
@@ -110,8 +94,7 @@ jobs:
             ## Docker
             [![Docker Image Version (latest by date)](https://img.shields.io/docker/v/wcjiang/reference)](https://hub.docker.com/r/wcjiang/reference) [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wcjiang/reference)](https://hub.docker.com/r/wcjiang/reference) [![Docker Pulls](https://img.shields.io/docker/pulls/wcjiang/reference)](https://hub.docker.com/r/wcjiang/reference)
 
-            轻松通过 `docker` 部署 `Quick Reference` 网站。
-
+          
             ```bash
             docker pull wcjiang/reference
             ```
