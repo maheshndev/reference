@@ -60,11 +60,17 @@ console.log(a); // => undefined
 ### Strings
 
 ```javascript
-let single = 'Wheres my bandit hat?';
-let double = 'Wheres my bandit hat?';
+let singleQuotes = 'Wheres my bandit hat?';
+let doubleQuotes = "Wheres my bandit hat?";
+// this is used to embed expressions or for creating multi-line strings
+let backTicks = `Wheres my bandit hat? ${some_value}`;
+
+// they can also be mixed,
+// NOTE: if you need the functionality of the backticks, use it as the surrounding quotes
+let mixedQuotes = `hello ${'dear' + name}, "let's have a great day today`;
 
 // => 21
-console.log(single.length);
+console.log(singleQuotes.length);
 ```
 
 ### Arithmetic Operators
@@ -146,9 +152,11 @@ if (isMailSent) {
 ### Ternary Operator
 
 ```javascript
+// The ternary operator is a concise way to write an if-else statement in a single line: condition ? exprIfTrue : exprIfFalse.
+
 var x = 1;
 
-// => true
+// true, (condition) ? value_if_true : value_if_false
 result = x == 1 ? true : false;
 ```
 
@@ -202,6 +210,17 @@ false ?? 'I lose'; //  false
 '' ?? 'Damn it'; //  ''
 ```
 
+#### Optional Chaining ?.
+
+```javascript
+const obj = {
+  name: 'John Doe',
+  age: 8
+};
+
+console.log(obj?.address);
+```
+
 ### else if
 
 ```javascript
@@ -234,6 +253,19 @@ switch (food) {
   default:
     console.log('Enjoy your meal');
 }
+```
+
+### Object Lookup
+
+```javascript
+const food = 'salad';
+
+const foods = {
+  oyster: 'The taste of the sea',
+  pizza: 'A delicious pie'
+};
+
+console.log(foods[food] || 'Enjoy your meal');
 ```
 
 ### == vs ===
@@ -483,10 +515,10 @@ console.log(myArray[1]); // 200
 
 |           | add | remove | start | end |
 | :-------- | :-: | :----: | :---: | :-: |
-| `push`    | ✔  |        |       | ✔  |
-| `pop`     |     |   ✔   |       | ✔  |
-| `unshift` | ✔  |        |  ✔   |     |
-| `shift`   |     |   ✔   |  ✔   |     |
+| `push`    |  ✔  |        |       |  ✔  |
+| `pop`     |     |   ✔    |       |  ✔  |
+| `unshift` |  ✔  |        |   ✔   |     |
+| `shift`   |     |   ✔    |   ✔   |     |
 
 {.show-header}
 
@@ -553,6 +585,15 @@ numbers.concat(newFirstNumber);
 ```
 
 If you want to avoid mutating your original array, you can use concat.
+
+### Destructuring
+
+```javascript
+const [name, age] = ['John Doe', 8];
+
+console.log(name);
+console.log(age);
+```
 
 ## JavaScript Set
 
@@ -734,12 +775,29 @@ for (let i = 0; i < 2; i += 1) {
 ```javascript
 const fruits = ['apple', 'orange', 'banana'];
 
+// 1. Print only indexes
 for (let index in fruits) {
   console.log(index);
 }
 // => 0
 // => 1
 // => 2
+
+// 2. Print only values
+for (let index in fruits) {
+  console.log(fruits[index]);
+}
+// => apple
+// => orange
+// => banana
+
+// 3. Print index with value
+for (let index in fruits) {
+  console.log(index, fruits[index]);
+}
+// => 0 apple
+// => 1 orange
+// => 2 banana
 ```
 
 ### for...of loop
@@ -753,6 +811,13 @@ for (let fruit of fruits) {
 // => apple
 // => orange
 // => banana
+
+for (let [index, value] of fruits.entries()) {
+  console.log(index, value);
+}
+// => 0 apple
+// => 1 orange
+// => 2 banana
 ```
 
 ## JavaScript Iterators {.cols-2}
@@ -1019,6 +1084,20 @@ console.log(myCat.name);
 
 // Assignment invokes the setter
 myCat.name = 'Yankee';
+```
+
+### Destructuring
+
+```javascript
+const obj = {
+  name: 'John Doe',
+  age: 8
+};
+
+const { name, age } = obj;
+
+console.log(name);
+console.log(age);
 ```
 
 ## JavaScript Classes

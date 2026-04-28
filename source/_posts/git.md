@@ -385,6 +385,84 @@ Print out a cool visualization of your log
 $ git log --pretty=oneline --graph --decorate --all
 ```
 
+List files changed in a commit 
+
+```shell script
+$ git log --name-only <commit-id>
+```
+
+List files changed in commits excluding merges
+
+```shell script
+$ git log --no-merges --name-only
+```
+
+Limit commits to the last N entries 
+
+```shell script
+$ git log -<number>
+```
+
+Limit commits to the last N entries (alternate syntax) 
+
+```shell script
+$ git log -n <number>
+```
+
+Limit commits to a maximum of N entries 
+
+```shell script
+$ git log --max-count=<number>
+```
+
+Show commits more recent than a specific date 
+
+```shell script
+$ git log --after="YYYY-MM-DD HH:MM:SS ±HHMM"
+```
+
+Show commits older than a specific date 
+
+```shell script
+$ git log --before="YYYY-MM-DD HH:MM:SS ±HHMM"
+```
+
+Filter commits by author matching a pattern 
+
+```shell script
+$ git log --author=<pattern>
+```
+
+Filter commits by commit message matching a pattern 
+
+```shell script
+$ git log --grep=<pattern>
+```
+
+Show commit graph of the current branch with reference decorations
+
+```shell script
+$ git log --graph --decorate
+```
+
+Show commit graph of a specific branch without switching to it
+
+```shell script
+$ git log --graph --decorate <branch>
+```
+
+Show commit graph for commits in one branch not in another
+
+```shell script
+$ git log --graph --decorate <branchB>..<branchA>
+```
+
+Show commit graph of all branches
+
+```shell script
+$ git log --graph --decorate --all
+```
+
 ### Branch {.row-span-2}
 
 List all branches and their upstreams
@@ -439,6 +517,38 @@ git config --global alias.st status
 See also: [More Aliases](https://gist.github.com/johnpolacek/69604a1f6861129ef088)
 
 ## Advanced Git
+
+### Worktrees
+
+Create a new working tree at the specified path. If a branch is specified, it checks out that branch. If no branch is given, a new one is created based on HEAD and named after the new directory.
+
+```shell script
+$ git worktree add <path> [<branch>]
+```
+
+List all of the active working trees associated with the repository.
+
+```shell script
+$ git worktree list
+```
+
+Remove the specified working tree.
+
+```shell script
+$ git worktree remove <path>
+```
+
+Clean up stale or manually deleted working trees.
+
+```shell script
+$ git worktree prune
+```
+
+Relocate the working tree to a new path.
+
+```shell script
+$  git worktree move <old_path> <new_path>
+```
 
 ### Submodules
 

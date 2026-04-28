@@ -76,6 +76,7 @@ Reference provides cheat sheets for the following:
   of [SASS](https://sass-lang.com).
 - [TOML](https://cheatsheets.zip/toml.html): This is a quick reference cheat sheet to the TOML format configuration file
   syntax.
+- [VHDL](https://cheatsheets.zip/vhdl.html): VHDL (VHSIC Hardware Description Language) cheat sheet - A comprehensive reference for digital hardware design and simulation.
 - [YAML](https://cheatsheets.zip/yaml.html): This is a quick reference cheat sheet for understanding and writing YAML
   format configuration files.
 
@@ -307,6 +308,14 @@ Reference provides cheat sheets for the following:
 </details>
 
 <details>
+<summary>Game</summary>
+
+- [Minecraft Java](https://cheatsheets.zip/minecraft-java.html): A comprehensive reference for Minecraft Java Edition (1.20.x) commands.
+- [Minecraft Bedrock](https://cheatsheets.zip/minecraft-bedrock.html): A comprehensive reference for Minecraft Bedrock Edition (1.20.x) commands.
+
+</details>
+
+<details>
 <summary>Other</summary>
 
 - [ASCII Code](https://cheatsheets.zip/ascii-code.html): This cheat sheet is a complete list of ASCII Code Table with
@@ -404,7 +413,7 @@ Only the `title` and `intro` fields are required, and the other options can be l
 Stay up-to-date with our project by following us on Twitter! Get all the latest news and updates right in your feed.
 It's the perfect way to stay in the loop.
 
-<a href="https://buymeacoffee.com/cheatsheets.zip"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cheatsheets.zip&button_colour=40DCA5&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
+<a href="https://buymeacoffee.com/cheatsheets.zip"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=cheatsheets.zip&button_colour=40DCA5&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
 ## 📃 License
 

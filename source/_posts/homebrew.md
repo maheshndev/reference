@@ -39,7 +39,6 @@ Install Homebrew :
 | `brew upgrade git`         | Upgrade package                        |
 | `brew unlink git`          | Unlink                                 |
 | `brew link git`            | Link                                   |
-| `brew switch git  1.0.0`   | Switch package version                 |
 | `brew list --versions git` | List the installed versions of package |
 
 ### Help
@@ -143,7 +142,7 @@ brew tap homebrew/cask
 List all the installed casks .
 
 ```bash
-brew cask list
+brew list --cask
 ```
 
 Search all known casks based on the substring text.
@@ -155,19 +154,19 @@ brew search <text>
 Install the given cask.
 
 ```bash
-brew cask install <cask>
+brew install --cask <cask>
 ```
 
 Reinstalls the given Cask
 
 ```bash
-brew cask reinstall <cask>
+brew reinstall --cask <cask>
 ```
 
 Uninstall the given cask.
 
 ```bash
-brew cask uninstall <cask>
+brew uninstall --cask <cask>
 ```
 
 ### Search, Install, Remove
